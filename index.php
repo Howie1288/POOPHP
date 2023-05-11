@@ -10,12 +10,18 @@ class Producto{
 
     public function mostrarNombreProducto() : void{
         echo $this->nombre;
+        echo '<br>';
     }
 
     public function mostrarPrecioProducto() : void{
         echo $this->precio;
+        echo '<br>';
+        
     }
-
+    public function mostrarDisponibleProducto() : void{
+        echo $this->disponible;
+        echo '<br>';
+    }
 }
 
 // CREACIÓN DE UN OBJETO
@@ -24,13 +30,13 @@ $mesa = new Producto();
 
 $mesa->nombre = "Mesa";
 $mesa->precio = 500;
-$mesa->disponible = true;
+$mesa->disponible = "No";
 
 $silla = new Producto(); 
 
-$mesa->nombre = "Silla grande";
-$mesa->precio = 100;
-$mesa->disponible = false;
+$silla->nombre = "Silla grande";
+$silla->precio = 100;
+$silla->disponible = "Si";
 
 
 
@@ -40,8 +46,13 @@ echo "</pre>";
 echo "<pre>";
 var_dump($silla);
 echo "</pre>";
-echo "El Producto esta dispobible";
+
 
 $mesa->mostrarNombreProducto();
-$silla->mostrarNombreProducto();
 $mesa->mostrarPrecioProducto();
+$mesa->mostrarDisponibleProducto();
+echo '<br>';
+$silla->mostrarNombreProducto();
+$silla->mostrarPrecioProducto();
+$silla->mostrarDisponibleProducto();
+
